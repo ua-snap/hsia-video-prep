@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Create necessary folders
+# Delete/Create necessary folders
+if [ -d "./tmp" ]; then rm -rf "./tmp"; fi
 mkdir -p ./tmp/data
+if [ -d "./output" ]; then rm -rf "./output"; fi
 mkdir -p ./output/data
 
 for srcfile in data/*
